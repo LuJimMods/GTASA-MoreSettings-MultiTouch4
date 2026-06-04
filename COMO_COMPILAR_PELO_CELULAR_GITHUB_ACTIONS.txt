@@ -1,0 +1,25 @@
+COMO COMPILAR PELO CELULAR USANDO GITHUB ACTIONS
+
+1. Crie uma conta no GitHub ou entre na sua conta.
+2. Crie um repositório novo, por exemplo: GTASA_MoreSettings_MultiTouch4.
+3. Envie TODOS os arquivos deste projeto para o repositório.
+   Importante: envie também a pasta oculta .github/workflows/build.yml.
+4. No GitHub, abra a aba Actions.
+5. Se aparecer aviso para ativar workflows, toque em "I understand my workflows, go ahead and enable them".
+6. Abra o workflow "Build libMoreSettings".
+7. Toque em "Run workflow".
+8. Quando terminar com sucesso, abra a execução e baixe o artifact chamado:
+   MoreSettings_MultiTouch4_lib
+9. Dentro dele estará:
+   artifact/mods/libMoreSettings.so
+   ou
+   libs/armeabi-v7a/libmoresettings.so
+10. Coloque a lib no GTA/AML em:
+   mods/libMoreSettings.so
+
+Se o GitHub reclamar que não encontrou o botão "Run workflow", faça qualquer alteração pequena em README_MULTITOUCH4_PTBR.txt e salve/commit. Isso força o workflow aparecer.
+
+Observação:
+A opção aparece como "JPatch MultiTouch4" no menu Game do More Settings.
+Ela altera o arquivo net.rusjj.jpatch.ini em [Gameplay] MultiTouch4.
+Talvez seja necessário reiniciar o jogo depois de mudar a opção.
