@@ -1,0 +1,40 @@
+name: Build libMoreSettings
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r21e
+          add-to-path: true
+
+      - name: Build armeabi-v7a
+        run: |
+          ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=Android.mk NDK_APPLICATION_MK=Application.mk -j$(nproc)
+
+      - name: Prepare output
+        run: |
+          mkdir -p artifact/mods
+          cp libs/armeabi-v7a/libmoresettings.so artifact/mods/libMoreSettings.so
+          cp libs/armeabi-v7a/libmoresettings.so artifact/libmoresettings.so
+          zip -r MoreSettings_MultiTouch4_lib.zip artifact
+
+      - name: Upload compiled lib
+        uses: actions/upload-artifact@v4
+        with:
+          name: MoreSettings_MultiTouch4_lib
+          path: |
+            libs/armeabi-v7a/libmoresettings.so
+            artifact/mods/libMoreSettings.so
+            MoreSettings_MultiTouch4_lib.zip
