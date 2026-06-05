@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
-#include <mod/logger.h>
+#include <logger.h>
 
 #include "amlmod.h"
 #include "iaml.h"
