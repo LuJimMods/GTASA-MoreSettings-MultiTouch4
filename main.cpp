@@ -130,7 +130,7 @@ extern "C" void OnModLoad()
         jpatchCfg = new Config("net.rusjj.jpatch");
         jpatchCfg->Init();
         pCfgJPatchMultiTouch4 = jpatchCfg->Bind("MultiTouch4", false, "Gameplay");
-        sautils->AddClickableItem(Game, "JPatch MultiTouch4", pCfgJPatchMultiTouch4->GetInt(), 0, sizeofA(pYesNo)-1, pYesNo, JPatchMultiTouch4Changed);
+        sautils->AddClickableItem(Game, "MultiTouch", pCfgJPatchMultiTouch4->GetInt(), 0, sizeofA(pYesNo)-1, pYesNo, JPatchMultiTouch4Changed);
 
         pCfgFPSNew = cfg->Bind("FPSNew", 30, "Tweaks");
         *(char*)(pGTASA + 0x5E4978) = pCfgFPSNew->GetInt();
