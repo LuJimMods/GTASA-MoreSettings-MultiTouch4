@@ -1,7 +1,7 @@
 #include <string>
-#include <mod/amlmod.h>
-#include <mod/logger.h>
-#include <mod/config.h>
+#include <amlmod.h>
+#include <logger.h>
+#include <config.h>
 
 #include <filesystem>
 namespace fs = std::filesystem;
