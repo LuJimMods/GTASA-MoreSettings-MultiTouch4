@@ -16,7 +16,7 @@ Plugin AML para GTA San Andreas Android que adiciona suporte aprimorado a multit
 2. Copie o arquivo `.so` para:
 
 ```
-Android/data/com.rockstargames.gtasa/files/AML/
+Android/data/com.rockstargames.gtasa/files/Mods
 ```
 
 3. Inicie o jogo.
