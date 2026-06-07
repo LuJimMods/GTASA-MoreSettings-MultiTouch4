@@ -32,7 +32,7 @@ Android/data/com.rockstargames.gtasa/files/Mods
 
 - GTA San Andreas Android v2.00
 - AndroidModLoader (AML)
-
+- Jpatch 1.10.0
 ## Créditos
 
 - AndroidModLoader Team
